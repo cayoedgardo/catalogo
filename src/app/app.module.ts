@@ -10,7 +10,8 @@ import { AboutComponent } from './pages/about/about.component';
 import { ProductoComponent } from './pages/producto/producto.component';
 import { ProductoDetalleComponent } from './pages/producto-detalle/producto-detalle.component';
 import { AppRoutingModule } from './app-routing.module';
-
+import { InfoPaginaService } from './services/info-pagina.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,9 +25,10 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [InfoPaginaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
